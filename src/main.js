@@ -5,6 +5,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import AppInitView from './main/App'
 
+import AppConfig from './config.json'
 import XChatAPP from './xchat/XChat'
 import LoginView from './xchat/Login'
 import RegisterView from './xchat/Register'
@@ -25,9 +26,8 @@ Vue.use(VueRouter)
  *    login router: login page's router.
  *    welcome router: Chat
  */
-const urlPrefix = ''
+const urlPrefix = AppConfig.urlPrefix
 const routes = [
-  { path: 'init', name: 'default', component: AppInitView },
   {
     path: urlPrefix + 'xchat',
     name: 'xchat',
@@ -69,7 +69,8 @@ const routes = [
         ]
       }
     ]
-  }
+  },
+  { path: urlPrefix + '', name: 'default', component: AppInitView }
 ]
 
 const router = new VueRouter({

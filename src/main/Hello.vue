@@ -6,7 +6,7 @@
     <h2>示例</h2>
     <ul>
       <li>
-        <router-link :to="{ path: '/xchat/welcome' }">xChat 聊天室</router-link>
+        <router-link :to="{ path: '/xChat/xchat/welcome' }">xChat 聊天室</router-link>
       </li>
     </ul>
 

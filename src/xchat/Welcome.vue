@@ -5,6 +5,8 @@
 </template>
 
 <script lang='babel'>
+import AppConfig from '../config.json'
+const urlPrefix = AppConfig.urlPrefix
 export default {
   data () {
     return {
@@ -25,7 +27,8 @@ export default {
       self.welcomeConfig.isLoaing = false
       console.log(' timeouted ......')
       clearTimeout(self.welcomeConfig.timer)
-      self.$router.push('/xchat/login')
+      const loginPath = urlPrefix + 'xchat/login'
+      self.$router.push(loginPath)
     }, self.welcomeConfig.timeout)
   },
   ready () {
