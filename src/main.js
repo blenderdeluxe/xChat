@@ -25,18 +25,19 @@ Vue.use(VueRouter)
  *    login router: login page's router.
  *    welcome router: Chat
  */
+const urlPrefix = 'xChat/index.html'
 const routes = [
-  { path: '/xChat', name: 'default', component: AppInitView },
+  { path: urlPrefix, name: 'default', component: AppInitView },
   {
-    path: '/xChat/xchat',
+    path: urlPrefix + '/xchat',
     name: 'xchat',
     component: XChatAPP,
     children: [
-      { path: '/xChat/xchat/welcome', name: 'welcome', component: WelcomeView },
-      { path: '/xChat/xchat/login', name: 'login', component: LoginView },
-      { path: '/xChat/xchat/register', name: 'register', component: RegisterView },
+      { path: urlPrefix + '/xchat/welcome', name: 'welcome', component: WelcomeView },
+      { path: urlPrefix + '/xchat/login', name: 'login', component: LoginView },
+      { path: urlPrefix + '/xchat/register', name: 'register', component: RegisterView },
       {
-        path: '/xChat/xchat/:userName',
+        path: urlPrefix + '/xchat/:userName',
         name: 'xChatHome',
         component: XChatHomeView,
         children: [
