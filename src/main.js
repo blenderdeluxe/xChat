@@ -26,17 +26,17 @@ Vue.use(VueRouter)
  *    welcome router: Chat
  */
 const routes = [
-  { path: '/', name: 'default', component: AppInitView },
+  { path: '/xChat', name: 'default', component: AppInitView },
   {
-    path: '/xchat',
+    path: '/xChat/xchat',
     name: 'xchat',
     component: XChatAPP,
     children: [
-      { path: '/xchat/welcome', name: 'welcome', component: WelcomeView },
-      { path: '/xchat/login', name: 'login', component: LoginView },
-      { path: '/xchat/register', name: 'register', component: RegisterView },
+      { path: '/xChat/xchat/welcome', name: 'welcome', component: WelcomeView },
+      { path: '/xChat/xchat/login', name: 'login', component: LoginView },
+      { path: '/xChat/xchat/register', name: 'register', component: RegisterView },
       {
-        path: '/xchat/:userName',
+        path: '/xChat/xchat/:userName',
         name: 'xChatHome',
         component: XChatHomeView,
         children: [
