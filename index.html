@@ -33,7 +33,77 @@
         justify-content: center;
         align-items: center;
       }
+      
+      @-webkit-keyframes slideOutLeftX{
+        0%{-webkit-transform:translateX(-200%); }
+        100%{-webkit-transform:translateX(-100%); visibility:hidden;}
+      }
+      
+      @-webkit-keyframes slideInLeftX{
+        0%{ -webkit-transform:translateX(-100%); visibility:visible }
+        100%{ -webkit-transform:translateX(0); }
+      }
+
+      @-webkit-keyframes slideOutLeftX{
+        0%{-webkit-transform:translateX(0); }
+        100%{-webkit-transform:translateX(-100%); visibility:hidden;}
+      }
+
+      @-webkit-keyframes slideOutRightX{
+        0%{-webkit-transform:translateX(0);}
+        100%{-webkit-transform:translateX(100%);  visibility:hidden;}
+      }
+
+
+
+      @-webkit-keyframes centerToLeft_center{
+        0%{-webkit-transform:translateX(0);}
+        100%{-webkit-transform:translateX(-100%);  visibility:hidden;}
+      }
+      /**/
+      @-webkit-keyframes leftToCenter_right{
+        0%{-webkit-transform:translateX(-200%);}
+        100%{-webkit-transform:translateX(-100%);  visibility:hidden;}
+      }
+      
+      @-webkit-keyframes centerToRight_center{
+        0%{-webkit-transform:translateX(0);}
+        100%{-webkit-transform:translateX(100%);  visibility:hidden;}
+      }
+      
+      @-webkit-keyframes rightToCenter_right{
+        0%{-webkit-transform:translateX(0);}
+        100%{-webkit-transform:translateX(-100%);  visibility:hidden;}
+      }
+
+
+
+      #xchart-view-chatlist, #xchart-view-groupchatlist, #xchart-view-friendlist, #xchart-view-profile{
+        flex: 1;
+        /*-webkit-animation-duration:1s;
+        animation-duration:1s;
+        -webkit-animation-fill-mode:both;
+        animation-fill-mode:both*/
+      }
+      #xchart-view-chatlist{
+        background: green;
+        /*-webkit-animation-name:slideInRight;
+        animation-name:slideInRight;*/
+      }
+      #xchart-view-groupchatlist{
+        background: red;
+        /*-webkit-animation-name:slideInLeft;
+        animation-name:slideInLeft;*/
+      }
+      #xchart-view-friendlist {
+        background: yellow;
+      }
+      #xchart-view-profile{
+        background: gray;
+      }
+
     </style>
+    <link rel="stylesheet" href="/static/css/animate.min.css">
   </head>
   <body>    
     <div id="xbr-chat-app" class="fill-parent">
