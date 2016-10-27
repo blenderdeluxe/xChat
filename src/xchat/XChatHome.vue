@@ -211,7 +211,7 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .xbrSlide-enter-active {
   -webkit-animation-name:slideInLeftX;
 }
