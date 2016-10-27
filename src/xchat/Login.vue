@@ -79,7 +79,8 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+@import "../sass_helper/sass_helper.scss";
 #xchat-view-login{
   display: flex;
   align-items: center;

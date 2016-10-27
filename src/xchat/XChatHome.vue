@@ -212,6 +212,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../sass_helper/sass_helper.scss";
 .xbrSlide-enter-active {
   -webkit-animation-name:slideInLeftX;
 }

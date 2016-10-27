@@ -69,7 +69,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+@import "../sass_helper/sass_helper.scss";
 .xui_loading-compentent{
   background: transparent;
   pointer-events: none;
