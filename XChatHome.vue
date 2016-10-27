@@ -78,6 +78,7 @@ export default {
       this._addClass(footerEle, this.footerActiveClass)
     },
     _uninstallWrapperActive () {
+      debugger
       var wrapperEle = document.getElementById('tab-content-wrapper')
       this._removeClass(wrapperEle, this.wrapperActiveClass)
       const footerEle = document.getElementById('xChat-footer')
